@@ -14,6 +14,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Math operations in SimpleMath class")
 class SimpleMathTestS4 {
@@ -22,6 +23,13 @@ class SimpleMathTestS4 {
 	@BeforeEach
 	void setup() {
 		math = new SimpleMath();
+	}
+	
+	@ParameterizedTest
+	@ValueSource(strings = {"Pelé", "Senna", "Keith Moon"})
+	void testValueSource(String firstName) {
+		System.out.println(firstName);
+		assertNotNull(firstName);
 	}
 	
 	@DisplayName("Test double subtraction [firstNumber, secondNumber, expected]")
