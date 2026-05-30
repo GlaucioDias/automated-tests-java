@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -23,13 +24,9 @@ class SimpleMathTestS4 {
 		math = new SimpleMath();
 	}
 	
-	@DisplayName("Test 6.2 / 2 = 3.1")
+	@DisplayName("Test double subtraction [firstNumber, secondNumber, expected]")
 	@ParameterizedTest
-	@CsvSource({
-		"6.2, 2, 3.1",
-		"71, 14, 5.07",
-		"18.3, 3.1, 5.90"
-	})
+	@CsvFileSource(resources = "/testDivision.csv")
 	void testDivision(double firstNumber, double secondNumber, double expected) {
 		System.out.println("Test " + firstNumber + " / " + secondNumber + " = " + expected);
 		Double actual = math.div(firstNumber, secondNumber);
