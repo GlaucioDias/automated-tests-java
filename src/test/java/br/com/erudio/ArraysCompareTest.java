@@ -28,8 +28,5 @@ class ArraysCompareTest {
 			numbers[0] = i;
 			Arrays.sort(numbers);
 		}
-		
-		
-//		assertArrayEquals(numbers, expectedArray);
 	}
 }
