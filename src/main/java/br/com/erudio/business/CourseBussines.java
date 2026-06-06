@@ -15,6 +15,9 @@ public class CourseBussines {
 	
 	public List<String> retrieveCoursesRelatedToSpring(String student) {
 		var filteredCourses = new ArrayList<String>();
+		
+		if("Foo Bar".equals(student)) return filteredCourses;
+		
 		var allCourses = service.retrieveCourses(student);
 		
 		for (String course : allCourses) {
