@@ -13,7 +13,7 @@ class CourseBussinesStubTest {
 	void testCoursesRelatedToSpring_When_UsingAStub() {
 		// Given / Arrange	
 		CourseService stubService = new CourseServiceStub();
-		CourseBussines busines = new CourseBussines(stubService);
+		CourseBusiness busines = new CourseBusiness(stubService);
 		// When / Act
 		var filteredCourses = busines.retrieveCoursesRelatedToSpring("Leandro");
 		// Then / Assert
@@ -23,7 +23,7 @@ class CourseBussinesStubTest {
 	void testCoursesRelatedToSpring_When_UsingAFooBarStudent() {
 		// Given / Arrange	
 		CourseService stubService = new CourseServiceStub();
-		CourseBussines busines = new CourseBussines(stubService);
+		CourseBusiness busines = new CourseBusiness(stubService);
 		// When / Act
 		var filteredCourses = busines.retrieveCoursesRelatedToSpring("Foo Bar");
 		// Then / Assert

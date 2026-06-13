@@ -6,10 +6,10 @@ import java.util.List;
 import br.com.erudio.service.CourseService;
 
 // CourseBussines = SUT - System (Method) Under Test
-public class CourseBussines {
+public class CourseBusiness {
 	private CourseService service;
 
-	public CourseBussines(CourseService service) {
+	public CourseBusiness(CourseService service) {
 		this.service = service;
 	}
 	
